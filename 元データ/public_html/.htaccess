@@ -1,0 +1,5 @@
+AddType "text/html; charset=UTF-8" html
+
+#order deny,allow
+#allow from all
+Require all granted

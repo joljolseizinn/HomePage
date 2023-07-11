@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<playlist>
+	<info>SE Sample</info>
+	<trackList>
+
+		<track>
+		<location>sound/decision.mp3</location>
+		<title>決定</title>
+		</track>
+
+		<track>
+		<location>sound/item.mp3</location>
+		<title>アイテム</title>
+		</track>
+
+		<track>
+		<location>sound/wave.mp3</location>
+		<title>wave</title>
+		</track>
+		
+		<track>
+		<location>sound/CatSe.mp3</location>
+		<title>鳴き声</title>
+		</track>
+
+	</trackList>
+</playlist>

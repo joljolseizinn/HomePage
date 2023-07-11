@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<playlist>
+	<info>BGM Sample</info>
+	<trackList>
+
+		<track>
+		<location>sound/kokouno.mp3</location>
+		<title>孤高の戦艦</title>
+		</track>
+
+		<track>
+		<location>sound/stage.mp3</location>
+		<title>南国～海～</title>
+		</track>
+
+		<track>
+		<location>sound/question.mp3</location>
+		<title>question</title>
+		</track>
+		
+		<track>
+		<location>sound/labyrinth.mp3</location>
+		<title>labyrinth</title>
+		</track>
+
+	</trackList>
+</playlist>

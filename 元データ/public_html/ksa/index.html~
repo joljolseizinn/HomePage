@@ -1,0 +1,151 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=SHIFT_JIS">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>コンピュータ部</title>
+    <link rel="stylesheet" type="text/css" href="hoge.css">
+  </head>
+
+  <body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#aa0000" alink="#0000ff" background="bg001.png">
+    <div class=section id=TOP>
+    <h1>東京情報大学コンピュータ部</h1>
+    </div>
+      <h2>Top</h2>
+        <p>　我々コンピュータ部は、10月の翔風祭に向けてWindows用ゲームアプリケーション制作をする部です。</p>
+        <p>　製作するゲームのジャンルは文化祭用ということもあり、簡単なアクション・パズル・クイズなど誰でも簡単に遊べるようなものが中心となります。<!--その他にもコミックマーケット等のイベントに向けて比較的大規模なゲームの開発なども行っています。--></p>
+        <p>　ゲームを作ってみたい、ゲーム製作に携わってみたい等の志を持つ方は、どうぞコンピュータ部の部室に見学に来てください。</p>
+      <hr>
+
+      <h2>Index</h2>
+        <p>クリックするとそのコンテンツに飛びます</p>
+          <a href="#EVENT">Event</a>
+            <a>年間活動計画</a>
+            <br>
+          <a href="#GAME">Game</a>
+            <a>翔風祭発表ゲーム</a>
+            <br>
+          <a href="#PROGRAM">Program</a>
+            <a>プログラム</a>
+            <br>
+          <a href="#GRAPHIC">Graphic</a>
+            <a>グラフィック</a>
+            <br>
+          <a href="#SOUND">Sound</a>
+            <a>サウンド</a>
+            <br>
+          <!--<a href="#RECORD">Record</a>
+            <a>戦歴</a>
+            <br>-->
+            
+          <a href="#CONTACT">Contact</a>
+            <a>連絡先</a>
+      <div class=section id=EVENT>
+      <hr>
+        <h2>Event</h2>
+          <h3>年間活動計画</h3>
+            <table summary="年間活動計画" border="1">
+              <tr>
+                <td>4月</td>
+                <td>新入生説明会</td>
+              </tr>
+              <tr>
+                <td>5月</td>
+                <td>新入生歓迎会</td>
+              </tr>
+              <tr>
+                <td>10月</td>
+                <td>翔風祭</td>
+              </tr>
+              <!--<tr>
+                <td>12月</td>
+                <td>学外活動</td>
+              </tr>-->
+              <tr>
+                <td>3月</td>
+                <td>4送会</td>
+              </tr>
+            </table>
+          <a href="#TOP">back to top</a>
+      </div>
+      <div class=section id=GAME>
+      <hr>
+        <h2>Game</h2>
+          <h3>翔風祭発表ゲーム</h3>
+            ここに翔風祭で公開したゲームを載せておきますのでよかったら遊んでください。
+            <br>
+            ※ゲーム用パッドを付けないと動作しない可能性がありますので個々に用意してください。
+            <br><br><br>
+            ・2009年度
+            <br>
+            <a href="http://kelp.s212.xrea.com/member2005/game/Game2009.zip">Download</a>
+            <br><br><br>
+          <a href="#TOP">back to top</a>
+      </div>
+      <hr>
+
+      <div class=section id=PROGRAM>
+        <h2>Program</h2>
+          <p>　ゲームプログラミングをする役職です。具体的にはグラフィックやサウンドから渡された素材を制御、運用してゲームを形作っていく、そんな役職です。また、基本的に開発にはC,C++というプログラミング言語を使用しています。</p>
+          <p>　経験者、初心者共に歓迎しておりますので「ゲームプログラミングをしたい」という志を持つ方、一緒に活動してみませんか？</p>
+          <img border="0" src="pro001.gif" width="640" height="480" alt="プログ画像">
+          <br>
+          <a href="#TOP">back to top</a>
+      </div>
+      <hr>
+
+      <div class=section id=GRAPHIC>
+        <h2>Graphic</h2>
+          <p>　ゲームに使う背景やキャラクターの画像、ドット絵等を作成する部門です。</p>
+          <p>　ポスター、3Dグラフィックの作成もやっています。</p>
+            <h3>ドット絵</h3>
+              <img border="0" src="gra001.gif" width="640" height="480" alt="ドット画像">
+            <h3>フォトショップによるグラフィック</h3>
+              <img border="0" src="gra002.jpg" width="640" height="480" alt="グラ画像１">
+              <br>
+              <img border="0" src="gra003.jpg" width="640" height="480" alt="グラ画像２">
+          <br>
+      <a href="#TOP">back to top</a>
+      </div>
+      <hr>
+
+      <div class=section id=SOUND>
+        <h2>Sound</h2>
+          <p>　ゲームの中で使われるBGMやSEを作成する役職です。</p>
+          <p>　主に「MIDI」という規格を使って、製作するゲームに要求される音作りをしていきます。</p>
+          <img border="0" src="sou001.gif" width="640" height="480" alt="サウンド画像">
+          <br>
+      <a href="#TOP">back to top</a>
+      </div>
+      <hr>
+
+      <!--<div class=section id=RECORD>
+        <h2>Record</h2>
+          <ul>
+           <li>第十七回翔風祭文化学術展部門課外活動イベント賞</li>
+            <li>コミックマーケット参加</li>
+            <li>翔風祭文展参加</li>
+            <li>翔風祭模擬店参加</li>
+          </ul>
+      <a href="#TOP">back to top</a>
+      </div>
+      <hr>-->
+
+      <div class=section id=CONTACT>
+        <h2>Contact</h2>
+          <h3>コンピュータ部幹事</h3>
+            <p>s10103 關川　晟大</p>
+            <a href="mailto:computer@edu.tuis.ac.jp">computer@edu.tuis.ac.jp</a>
+          <h3>活動場所</h3>
+            <p>ピオーネ2階 部室2</p>
+      <a href="#TOP">back to top</a>
+      </div>
+      <hr>
+
+      <div style="text-align:center">
+        <a href="http://www.tuis.ac.jp/research/iframe/14.html">to 東京情報大学課外活動団体</a>
+      </div>
+  </body>
+
+</html>
