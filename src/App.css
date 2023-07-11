@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,22 +12,28 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+*/
+.header {
+  position: relative; /*相対配置*/
+}
+.header p {
+  position: absolute;
+  color: white; /*文字は白に*/
+  font-weight: bold; /*太字に*/
+  font-size: 4em; /*サイズ4倍*/
+  font-family: Quicksand, sans-serif; /*Google Font*/
+  top: 0;
+  left: 15%;
+}
+.header img {
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.top {
+  font-size: 150%;
+  font-weight: bold;
 }
-
+/*
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +42,4 @@
     transform: rotate(360deg);
   }
 }
+*/
