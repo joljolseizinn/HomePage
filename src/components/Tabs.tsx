@@ -4,8 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import PersonPinIcon from "@material-ui/icons/PersonPin";
-import HelpIcon from "@material-ui/icons/Help";
 import Home from "@material-ui/icons/Home";
 import EventIcon from "@material-ui/icons/Whatshot";
 import GameIcon from "@material-ui/icons/SportsEsports";
@@ -23,7 +21,6 @@ import GamePage from "./Game";
 import SoundPage from "./Sound";
 import GraphicPage from "./Graphic";
 import Window from "./useWindowSize";
-import useWindowSize from "./useWindowSize";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -66,12 +63,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 const GetWidth = () => {
+  //画面サイズを取得してwidthだけを返す
   const [width, height] = Window();
 
   return width;
 };
 
 export const Button_A: React.FC = () => {
+  //fullwidthタブ
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -84,7 +83,7 @@ export const Button_A: React.FC = () => {
         <Tabs
           value={value}
           onChange={handleChange}
-          variant="fullWidth"
+          variant="fullWidth" //ここが違う
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
@@ -121,6 +120,7 @@ export const Button_A: React.FC = () => {
 }; //ここまでButton_A
 
 export const Button_B: React.FC = () => {
+  //scrollableタブ
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -133,7 +133,7 @@ export const Button_B: React.FC = () => {
         <Tabs
           value={value}
           onChange={handleChange}
-          variant="scrollable"
+          variant="scrollable" //ここが違う
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
@@ -171,9 +171,11 @@ export const Button_B: React.FC = () => {
 
 const ScrollableTabsButtonForce: React.FC = () => {
   if (GetWidth() > 900) {
-    return <Button_A></Button_A>;
+    //画面サイズが900より大きい時
+    return <Button_A></Button_A>; //タブはfullWidth
   } else {
-    return <Button_B></Button_B>;
+    //画面サイズが900以下の時
+    return <Button_B></Button_B>; //タブをscrollableに変更
   }
 };
 export default ScrollableTabsButtonForce;

@@ -24,11 +24,13 @@
   font-weight: bold;
 }
 @media screen and (max-width: 1000px) {
+  /*画面幅が1000px以下の時*/
   .Top {
     font-size: 2em;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
+  /*画面幅が700px以下の時*/
   .Top {
     font-size: 1.5em;
   }
