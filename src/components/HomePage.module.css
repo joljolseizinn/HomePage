@@ -1,21 +1,39 @@
+/*
 .Home {
-  background-color: antiquewhite;
+  
   text-align: center;
   font-size: 150%;
-  font-weight: bold;
+  
 }
-
+*/
 .Top {
+  background-color: antiquewhite;
+  font-weight: bold;
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .MuiSvgIcon-root {
   color: rgb(23, 247, 255);
 }
-.Body{
+
+.Body {
   background-color: rgb(215, 252, 255);
   text-align: center;
   font-size: 150%;
   font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+  .Top {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .Top {
+    font-size: 1.5em;
+  }
+  .Body {
+    font-size: 100%;
+    font-weight: bold;
+  }
 }

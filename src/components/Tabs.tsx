@@ -3,7 +3,6 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import PhoneIcon from "@material-ui/icons/Phone";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
 import HelpIcon from "@material-ui/icons/Help";
@@ -13,7 +12,6 @@ import GameIcon from "@material-ui/icons/SportsEsports";
 import CodeIcon from "@material-ui/icons/Code";
 import MusicIcon from "@material-ui/icons/MusicNote";
 import BrushIcon from "@material-ui/icons/Brush";
-import ShoppingBasket from "@material-ui/icons/ShoppingBasket";
 import ThumbDown from "@material-ui/icons/ThumbDown";
 import ThumbUp from "@material-ui/icons/ThumbUp";
 import Typography from "@material-ui/core/Typography";
@@ -24,6 +22,8 @@ import EventPage from "./Event";
 import GamePage from "./Game";
 import SoundPage from "./Sound";
 import GraphicPage from "./Graphic";
+import Window from "./useWindowSize";
+import useWindowSize from "./useWindowSize";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -65,15 +65,19 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
 }));
+const GetWidth = () => {
+  const [width, height] = Window();
 
-const ScrollableTabsButtonForce: React.FC = () => {
+  return width;
+};
+
+export const Button_A: React.FC = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue);
   };
-
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -84,7 +88,6 @@ const ScrollableTabsButtonForce: React.FC = () => {
           scrollButtons="on"
           indicatorColor="primary"
           textColor="primary"
-          //aria-label="scrollable force tabs example"
           centered
         >
           <Tab label="HOME" icon={<Home />} {...a11yProps(0)} />
@@ -115,5 +118,62 @@ const ScrollableTabsButtonForce: React.FC = () => {
       </TabPanel>
     </div>
   );
+}; //ここまでButton_A
+
+export const Button_B: React.FC = () => {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+    setValue(newValue);
+  };
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="on"
+          indicatorColor="primary"
+          textColor="primary"
+          centered
+        >
+          <Tab label="HOME" icon={<Home />} {...a11yProps(0)} />
+          <Tab label="EVENT" icon={<EventIcon />} {...a11yProps(1)} />
+          <Tab label="GAME" icon={<GameIcon />} {...a11yProps(2)} />
+          <Tab label="PROGRAM" icon={<CodeIcon />} {...a11yProps(3)} />
+          <Tab label="SOUND" icon={<MusicIcon />} {...a11yProps(4)} />
+          <Tab label="GRAPHIC" icon={<BrushIcon />} {...a11yProps(5)} />
+        </Tabs>
+      </AppBar>
+      <TabPanel value={value} index={0}>
+        <HomePage></HomePage>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <EventPage></EventPage>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <GamePage></GamePage>
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <ProgramPage></ProgramPage>
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <SoundPage></SoundPage>
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        <GraphicPage></GraphicPage>
+      </TabPanel>
+    </div>
+  );
+}; //ここまでButton_B
+
+const ScrollableTabsButtonForce: React.FC = () => {
+  if (GetWidth() > 900) {
+    return <Button_A></Button_A>;
+  } else {
+    return <Button_B></Button_B>;
+  }
 };
 export default ScrollableTabsButtonForce;

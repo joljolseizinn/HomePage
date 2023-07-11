@@ -20,9 +20,9 @@ function App() {
   return (
     //メインdivタグ
     <div className="App">
-      <header className="header">
-        <img src={head_img} />
+      <header>
         <p>東京情報大学 コンピュータ部</p>
+        <img src={head_img} />
       </header>
       <div>
         <TabsButton></TabsButton>
@@ -30,5 +30,5 @@ function App() {
     </div>
   );
 }
-
+//<img src={head_img} />
 export default App;

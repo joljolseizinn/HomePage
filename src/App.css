@@ -1,45 +1,53 @@
 .App {
   text-align: center;
 }
-/*
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  position: relative;
+  /*background-image: url("./images/head.png");
+  background-size: cover;*/
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-*/
-.header {
-  position: relative; /*相対配置*/
-}
-.header p {
+header p {
+  width: 100%;
   position: absolute;
   color: white; /*文字は白に*/
   font-weight: bold; /*太字に*/
   font-size: 4em; /*サイズ4倍*/
   font-family: Quicksand, sans-serif; /*Google Font*/
-  top: 0;
-  left: 15%;
+  top: 0em;
 }
-.header img {
+header img {
   width: 100%;
 }
-
-.top {
-  font-size: 150%;
-  font-weight: bold;
-}
-/*
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 1000px) {
+  header p {
+    width: 100%;
+    position: absolute;
+    color: white; /*文字は白に*/
+    font-weight: bold; /*太字に*/
+    font-size: 3em; /*サイズ2倍*/
+    font-family: Quicksand, sans-serif; /*Google Font*/
+    top: 0rem;
   }
 }
-*/
+@media screen and (max-width: 750px) {
+  header p {
+    width: 100%;
+    position: absolute;
+    color: white; /*文字は白に*/
+    font-weight: bold; /*太字に*/
+    font-size: 2em; /*サイズ2倍*/
+    font-family: Quicksand, sans-serif; /*Google Font*/
+    top: 0rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  header p {
+    width: 100%;
+    position: absolute;
+    color: white; /*文字は白に*/
+    font-weight: bold; /*太字に*/
+    font-size: 1.5em; /*サイズ2倍*/
+    font-family: Quicksand, sans-serif; /*Google Font*/
+    top: 0rem;
+  }
+}
