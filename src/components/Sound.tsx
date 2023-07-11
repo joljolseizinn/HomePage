@@ -1,9 +1,9 @@
 import React from "react";
-import PlaySound from "react-sound";
-import { useState, useEffect } from "react";
+import PlaySound from "use-sound";
+import Sound from "../sounds/miku.wav";
 
 const SoundPage: React.FC = () => {
-  const [play, { stop, pause }] = PlaySound("../sounds/miku.mp3");
+  const [playLoud] = PlaySound(Sound, { volume: 1 });
 
   return (
     <div>
@@ -11,9 +11,7 @@ const SoundPage: React.FC = () => {
       音楽の知識が無い方でも少しの基礎を学べば曲を作ることが可能です！
       <div>
         <>
-          <button onClick={() => play()}>音を鳴らす</button>
-          <button onClick={() => stop()}>停止</button>
-          <button onClick={() => pause()}>ポーズ</button>
+          <button onClick={() => playLoud()}>初音ミクサンプル</button>
         </>
       </div>
     </div>
