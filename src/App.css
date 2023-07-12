@@ -11,33 +11,33 @@ header p {
   position: absolute;
   color: white; /*文字は白に*/
   font-weight: bold; /*太字に*/
-  font-size: 4em; /*サイズ4倍*/
+  font-size: 3em; /*サイズ3倍*/
   font-family: Quicksand, sans-serif; /*Google Font*/
-  top: 0em;
+  top: -15%;
 }
 header img {
   width: 100%;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
   header p {
     width: 100%;
     position: absolute;
     color: white; /*文字は白に*/
     font-weight: bold; /*太字に*/
-    font-size: 3em; /*サイズ2倍*/
+    font-size: 200%; /*サイズ2倍*/
     font-family: Quicksand, sans-serif; /*Google Font*/
-    top: 0rem;
+    top: -20%;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 880px) {
   header p {
     width: 100%;
     position: absolute;
     color: white; /*文字は白に*/
     font-weight: bold; /*太字に*/
-    font-size: 2em; /*サイズ2倍*/
+    font-size: 150%; /*サイズ2倍*/
     font-family: Quicksand, sans-serif; /*Google Font*/
-    top: 0rem;
+    top: -20%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -46,8 +46,19 @@ header img {
     position: absolute;
     color: white; /*文字は白に*/
     font-weight: bold; /*太字に*/
-    font-size: 1.5em; /*サイズ2倍*/
+    font-size: 120%; /*サイズ1.5倍*/
     font-family: Quicksand, sans-serif; /*Google Font*/
-    top: 0rem;
+    top: -20%;
+  }
+}
+@media screen and (max-width: 550px) {
+  header p {
+    width: 100%;
+    position: absolute;
+    color: white; /*文字は白に*/
+    font-weight: bold; /*太字に*/
+    font-size: 100%; /*サイズ1.5倍*/
+    font-family: Quicksand, sans-serif; /*Google Font*/
+    top: -20%;
   }
 }
