@@ -10,8 +10,6 @@ import GameIcon from "@material-ui/icons/SportsEsports";
 import CodeIcon from "@material-ui/icons/Code";
 import MusicIcon from "@material-ui/icons/MusicNote";
 import BrushIcon from "@material-ui/icons/Brush";
-import ThumbDown from "@material-ui/icons/ThumbDown";
-import ThumbUp from "@material-ui/icons/ThumbUp";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import HomePage from "./HomePage";
@@ -70,56 +68,6 @@ const GetWidth = () => {
 };
 
 export const Button_A: React.FC = () => {
-  //fullwidthタブ
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
-  };
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          variant="fullWidth" //ここが違う
-          scrollButtons="on"
-          indicatorColor="primary"
-          textColor="primary"
-          centered
-        >
-          <Tab label="HOME" icon={<Home />} {...a11yProps(0)} />
-          <Tab label="EVENT" icon={<EventIcon />} {...a11yProps(1)} />
-          <Tab label="GAME" icon={<GameIcon />} {...a11yProps(2)} />
-          <Tab label="PROGRAM" icon={<CodeIcon />} {...a11yProps(3)} />
-          <Tab label="SOUND" icon={<MusicIcon />} {...a11yProps(4)} />
-          <Tab label="GRAPHIC" icon={<BrushIcon />} {...a11yProps(5)} />
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-        <HomePage></HomePage>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <EventPage></EventPage>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <GamePage></GamePage>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <ProgramPage></ProgramPage>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <SoundPage></SoundPage>
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        <GraphicPage></GraphicPage>
-      </TabPanel>
-    </div>
-  );
-}; //ここまでButton_A
-
-export const Button_B: React.FC = () => {
   //scrollableタブ
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -130,22 +78,24 @@ export const Button_B: React.FC = () => {
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          variant="scrollable" //ここが違う
-          scrollButtons="on"
-          indicatorColor="primary"
-          textColor="primary"
-          centered
-        >
-          <Tab label="HOME" icon={<Home />} {...a11yProps(0)} />
-          <Tab label="EVENT" icon={<EventIcon />} {...a11yProps(1)} />
-          <Tab label="GAME" icon={<GameIcon />} {...a11yProps(2)} />
-          <Tab label="PROGRAM" icon={<CodeIcon />} {...a11yProps(3)} />
-          <Tab label="SOUND" icon={<MusicIcon />} {...a11yProps(4)} />
-          <Tab label="GRAPHIC" icon={<BrushIcon />} {...a11yProps(5)} />
-        </Tabs>
+        <Box display="flex" justifyContent="center" width="100%">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="on"
+            indicatorColor="primary"
+            textColor="primary"
+            centered
+          >
+            <Tab label="HOME" icon={<Home />} {...a11yProps(0)} />
+            <Tab label="EVENT" icon={<EventIcon />} {...a11yProps(1)} />
+            <Tab label="GAME" icon={<GameIcon />} {...a11yProps(2)} />
+            <Tab label="PROGRAM" icon={<CodeIcon />} {...a11yProps(3)} />
+            <Tab label="SOUND" icon={<MusicIcon />} {...a11yProps(4)} />
+            <Tab label="GRAPHIC" icon={<BrushIcon />} {...a11yProps(5)} />
+          </Tabs>
+        </Box>
       </AppBar>
       <TabPanel value={value} index={0}>
         <HomePage></HomePage>
@@ -170,12 +120,6 @@ export const Button_B: React.FC = () => {
 }; //ここまでButton_B
 
 const ScrollableTabsButtonForce: React.FC = () => {
-  if (GetWidth() > 900) {
-    //画面サイズが900より大きい時
-    return <Button_A></Button_A>; //タブはfullWidth
-  } else {
-    //画面サイズが900以下の時
-    return <Button_B></Button_B>; //タブをscrollableに変更
-  }
+  return <Button_A></Button_A>;
 };
 export default ScrollableTabsButtonForce;
