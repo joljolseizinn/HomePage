@@ -19,3 +19,21 @@ td {
 button {
   color: chocolate;
 }
+.SE {
+  background-color: rgb(238, 255, 198);
+}
+.SE:hover {
+  background-color: white;
+}
+.BGM {
+  background-color: rgb(252, 169, 252);
+}
+.BGM:hover {
+  background-color: white;
+}
+.MikuStyle {
+  background-color: #baf8f3;
+}
+.MikuStyle:hover {
+  background-color: white;
+}
