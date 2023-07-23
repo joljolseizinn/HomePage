@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SoundPage.module.css";
+import styles from "./Sound.module.css";
 import PlaySound from "use-sound";
 import { Button } from "@material-ui/core";
 import PlayIcon from "@material-ui/icons/PlayCircleFilled";
@@ -21,8 +21,6 @@ const SoundPage: React.FC = () => {
   const [BGM_APlay, { stop: stopBGM_A }] = PlaySound(BGM_A, { volume: 0.8 });
   const [BGM_BPlay, { stop: stopBGM_B }] = PlaySound(BGM_B, { volume: 0.8 });
   const [BGM_CPlay, { stop: stopBGM_C }] = PlaySound(BGM_C, { volume: 0.8 });
-
-  const [mouseEnter, setMouseEnter] = useState(false);
 
   const [PlaySE_A, setPlaySE_A] = useState(false);
   const SE_APlayer = () => {
@@ -176,18 +174,5 @@ const SoundPage: React.FC = () => {
     </>
   );
 };
-/*
-const soundPlay:React.FC = () => {
-  const [play, { stop, pause }] = PlaySound('../sounds/mikumiku.wav');
-
-  return (
-    <>
-      <button onClick={() => play()}>音を鳴らす</button>
-      <button onClick={() => stop()}>停止</button>
-      <button onClick={() => pause()}>ポーズ</button>
-    </>
-  );
-}
-*/
 
 export default SoundPage;
