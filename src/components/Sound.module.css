@@ -1,23 +1,22 @@
-table {
+
+.table {
   border: 1;
   width: 50%;
-  background-color: #a9ffcd;
-  border-collapse: separate;
-  border-spacing: 0.5;
-  table-layout: fixed;
-  border-left: solid 1px #444;
-  border-right: solid 1px #444;
+  border-collapse: collapse;
+  /*border-spacing: 0.5;*/
+  table-layout:fixed;
   margin-left: auto;
   margin-right: auto;
+  padding: 1px;
 }
 th {
   background-color: #00e2cf; /* 背景色指定 */
+  border: 1px solid #000;
 }
 td {
-  border-spacing: 0.5;
-}
-button {
-  color: chocolate;
+  border: 1px solid #000;
+  background-color: rgb(245, 245, 240);
+  
 }
 .SE {
   background-color: rgb(238, 255, 198);
@@ -31,9 +30,9 @@ button {
 .BGM:hover {
   background-color: white;
 }
-.MikuStyle {
+.Miku {
   background-color: #baf8f3;
 }
-.MikuStyle:hover {
+.Miku:hover {
   background-color: white;
 }

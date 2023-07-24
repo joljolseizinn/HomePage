@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Sound.module.css";
 import PlaySound from "use-sound";
-import { Button } from "@material-ui/core";
+import { Button ,Box ,Grid, TableBody} from "@material-ui/core";
 import PlayIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseIcon from "@material-ui/icons/PauseCircleFilled";
 import StopIcon from "@material-ui/icons/Stop";
@@ -87,13 +87,13 @@ const SoundPage: React.FC = () => {
 
   return (
     <>
-      <div>
+      <Grid container alignItems='center' justifyContent='center' direction="column">
         <p>
           ゲーム中に流れるBGMやSEを作成する役職です。
           音楽の知識が無い方でも少しの基礎を学べば曲を作ることが可能です！
         </p>
-        <div>
-          <table>
+        <Box pt={3}>
+          <table className={styles.table}>
             <tr>
               <th>効果音</th>
               <th>BGM</th>
@@ -102,7 +102,9 @@ const SoundPage: React.FC = () => {
             <tr>
               <td>
                 <Button
-                  className={styles.SE}
+                  //className={styles.SE}
+                  variant="contained" 
+                  style={{backgroundColor: "#fef263",}}
                   onClick={() => (setPlaySE_A(!PlaySE_A), SE_APlayer())}
                 >
                   効果音サンプルA
@@ -111,7 +113,8 @@ const SoundPage: React.FC = () => {
               </td>
               <td>
                 <Button
-                  className={styles.BGM}
+                  //className={styles.BGM}
+                  variant="contained" color="primary"
                   onClick={() => (setPlayBGM_A(!PlayBGM_A), BGM_APlayer())}
                 >
                   BGMサンプルA
@@ -120,7 +123,8 @@ const SoundPage: React.FC = () => {
               </td>
               <td>
                 <Button
-                  className={styles.MikuStyle}
+                  //className={styles.Miku}
+                  variant="contained" style={{backgroundColor: "#bbc8e6",}}
                   onClick={() => (setPlayMiku(!PlayMiku), MikuPlayer())}
                 >
                   初音ミクサンプル
@@ -131,7 +135,8 @@ const SoundPage: React.FC = () => {
             <tr>
               <td>
                 <Button
-                  className={styles.SE}
+                  //className={styles.SE}
+                  variant="contained" style={{backgroundColor: "#fef263",}}
                   onClick={() => (setPlaySE_B(!PlaySE_B), SE_BPlayer())}
                 >
                   効果音サンプルB
@@ -140,7 +145,8 @@ const SoundPage: React.FC = () => {
               </td>
               <td>
                 <Button
-                  className={styles.BGM}
+                  //className={styles.BGM}
+                  variant="contained" color="primary"
                   onClick={() => (setPlayBGM_B(!PlayBGM_B), BGM_BPlayer())}
                 >
                   BGMサンプルB
@@ -151,7 +157,8 @@ const SoundPage: React.FC = () => {
             <tr>
               <td>
                 <Button
-                  className={styles.SE}
+                  //className={styles.SE}
+                  variant="contained" style={{backgroundColor: "#fef263",}}
                   onClick={() => (setPlaySE_C(!PlaySE_C), SE_CPlayer())}
                 >
                   効果音サンプルC
@@ -160,7 +167,8 @@ const SoundPage: React.FC = () => {
               </td>
               <td>
                 <Button
-                  className={styles.BGM}
+                  //className={styles.BGM}
+                  variant="contained" color="primary"
                   onClick={() => (setPlayBGM_C(!PlayBGM_C), BGM_CPlayer())}
                 >
                   BGMサンプルC
@@ -169,8 +177,8 @@ const SoundPage: React.FC = () => {
               </td>
             </tr>
           </table>
-        </div>
-      </div>
+        </Box>
+      </Grid>
     </>
   );
 };
